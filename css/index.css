@@ -1,0 +1,353 @@
+.hero {
+    position: relative;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero__imagem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* MUDA AQUI */
+    object-position: right center;
+    background-color: #F5E6D3;
+}
+
+
+/* Camada escura para o texto ser legível sobre a imagem */
+
+.hero__sombra {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to right, rgba(26, 8, 0, .85) 0%, rgba(37, 16, 7, 0.5) 55%, rgba(26, 8, 0, .10) 100%);
+}
+
+
+/* Conteúdo do hero (fica acima da sombra) */
+
+.hero__conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+    padding: 80px 0;
+}
+
+
+/* Pequena etiqueta acima do título */
+
+.hero__etiqueta {
+    display: inline-block;
+    background-color: var(--cor-castanho-dourado);
+    color: var(--cor-branco);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.hero__titulo {
+    color: var(--cor-bege);
+    margin-bottom: 18px;
+}
+
+.hero__subtitulo {
+    color: #E8D5B0;
+    font-size: 16px;
+    margin-bottom: 34px;
+}
+
+
+/* -----------------------------------------------
+   SOBRE — bloco com imagem e texto lado a lado
+----------------------------------------------- */
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.sobre__foto {
+    border-radius: var(--borda-raio-grande);
+    overflow: hidden;
+    box-shadow: var(--sombra-forte);
+    aspect-ratio: 4/3;
+}
+
+.sobre__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre__paragrafo {
+    margin-top: 14px;
+}
+
+
+/* Caixa escura com a missão da empresa */
+
+.sobre__missao {
+    background-color: var(--cor-castanho-fundo);
+    border-radius: var(--borda-raio-medio);
+    padding: 26px 30px;
+    margin-top: 28px;
+}
+
+.sobre__missao h4 {
+    color: var(--cor-castanho-claro);
+    font-size: 14px;
+    font-family: var(--fonte-corpo);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.sobre__missao p {
+    color: #E8D5B0;
+    font-size: 14px;
+}
+
+
+/* -----------------------------------------------
+   DESTAQUES — grelha de produtos em destaque
+----------------------------------------------- */
+
+
+/* Linha com título à esquerda e botão à direita */
+
+.destaques__cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+
+/* Abas de filtro: Todos / Roupas / Calçados */
+
+.destaques__filtros {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.destaques__aba {
+    padding: 8px 24px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 100px;
+    background-color: transparent;
+    color: var(--cor-texto-medio);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--velocidade-transicao);
+}
+
+.destaques__aba:hover,
+.destaques__aba.selecionada {
+    background-color: var(--cor-castanho-fundo);
+    border-color: var(--cor-castanho-fundo);
+    color: var(--cor-bege);
+}
+
+
+/* Grelha de 4 produtos */
+
+.destaques__grelha {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* Cartão de produto */
+
+.produto {
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-raio-medio);
+    overflow: hidden;
+    box-shadow: var(--sombra-leve);
+    transition: transform var(--velocidade-transicao), box-shadow var(--velocidade-transicao);
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-forte);
+}
+
+.produto__foto {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background-color: var(--cor-borda);
+}
+
+.produto__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.produto__info {
+    padding: 16px 18px 20px;
+}
+
+.produto__nome {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.produto__preco {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cor-castanho-dourado);
+    margin-bottom: 14px;
+}
+
+
+/* -----------------------------------------------
+   TESTEMUNHOS — opiniões de clientes
+----------------------------------------------- */
+
+.testemunhos__grelha {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.testemunho {
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-raio-medio);
+    padding: 26px 22px;
+    box-shadow: var(--sombra-leve);
+    border-bottom: 4px solid var(--cor-castanho-dourado);
+    position: relative;
+}
+
+.testemunhos__ver-mais {
+    text-align: center;
+    margin-top: 36px;
+}
+
+
+/* Aspas decorativas */
+
+.testemunho__aspas {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-family: var(--fonte-titulo);
+    font-size: 50px;
+    color: #E8D5B0;
+    line-height: 1;
+}
+
+.testemunho__estrelas {
+    color: var(--cor-castanho-dourado);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.testemunho__texto {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--cor-texto-medio);
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.testemunho__autor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Avatar circular */
+
+.testemunho__avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--cor-castanho-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.testemunho__nome {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--cor-castanho-fundo);
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVO
+----------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .destaques__grelha {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .testemunhos__grelha {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .destaques__grelha {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-previa__grelha {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .galeria-previa {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .galeria-previa__item--alto {
+        grid-row: auto;
+    }
+    .valores__grelha {
+        grid-template-columns: 1fr;
+    }
+    .destaques__cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .destaques__grelha {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .testemunhos__grelha {
+        grid-template-columns: 1fr;
+    }
+    .blog-previa__grelha {
+        grid-template-columns: 1fr;
+    }
+    .galeria-previa {
+        grid-template-columns: 1fr 1fr;
+    }
+}

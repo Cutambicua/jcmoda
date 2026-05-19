@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #F5E6D3;
+    color: #3E2C23;
+}
+
+
+/* HEADER */
+
+header {
+    background: #3E2C23;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #C8A165;
+}
+
+
+/* HERO */
+
+.hero {
+    background: url("../img/hero.jpg") center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-text {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+button {
+    background: #C8A165;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* BENEFICIOS */
+
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+/* PRODUTOS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+}
+
+.preco {
+    color: #C8A165;
+}
+
+
+/* NEWSLETTER */
+
+.newsletter {
+    background: #3E2C23;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #2b1d17;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social a {
+    margin: 10px;
+    color: #C8A165;
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

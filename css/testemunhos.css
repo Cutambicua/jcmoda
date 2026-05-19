@@ -1,0 +1,218 @@
+/* -----------------------------------------------
+   TESTEMUNHO EM DESTAQUE — o maior, no topo
+----------------------------------------------- */
+
+.testemunho-destaque {
+    background: linear-gradient( 135deg, var(--cor-castanho-fundo) 0%, var(--cor-castanho-medio) 100%);
+    border-radius: var(--borda-raio-grande);
+    padding: 48px 52px;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Aspas decorativas grandes no fundo */
+
+.testemunho-destaque__aspas-fundo {
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    font-family: var(--fonte-titulo);
+    font-size: 200px;
+    color: rgba(255, 255, 255, .05);
+    line-height: 1;
+    user-select: none;
+}
+
+.testemunho-destaque__estrelas {
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: var(--cor-castanho-dourado);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.testemunho-destaque__texto {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(18px, 2.5vw, 24px);
+    color: var(--cor-bege);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.testemunho-destaque__autor {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.testemunho-destaque__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--cor-castanho-dourado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    border: 3px solid rgba(212, 165, 116, .4);
+}
+
+.testemunho-destaque__nome {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--cor-bege);
+    display: block;
+    margin-bottom: 3px;
+}
+
+.testemunho-destaque__cargo {
+    font-size: 13px;
+    color: var(--cor-castanho-claro);
+    opacity: .8;
+}
+
+
+/* -----------------------------------------------
+   GRELHA DE TESTEMUNHOS — cartões normais
+----------------------------------------------- */
+
+.testemunhos-grelha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.testemunho {
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-raio-medio);
+    padding: 28px 24px;
+    box-shadow: var(--sombra-leve);
+    border-bottom: 4px solid var(--cor-castanho-dourado);
+    position: relative;
+    transition: transform var(--velocidade-transicao), box-shadow var(--velocidade-transicao);
+}
+
+.testemunho:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media);
+}
+
+
+/* Aspas decorativas no canto */
+
+.testemunho__aspas {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-family: var(--fonte-titulo);
+    font-size: 50px;
+    color: var(--cor-bege);
+    line-height: 1;
+}
+
+.testemunho__estrelas {
+    color: var(--cor-castanho-dourado);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.testemunho__texto {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--cor-texto-medio);
+    line-height: 1.75;
+    margin-bottom: 20px;
+}
+
+.testemunho__autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testemunho__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--cor-castanho-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.testemunho__nome {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--cor-castanho-fundo);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.testemunho__data {
+    font-size: 12px;
+    color: var(--cor-texto-suave);
+}
+
+
+/* -----------------------------------------------
+   CAIXA CTA — convite a deixar testemunho
+----------------------------------------------- */
+
+.cta-testemunho {
+    background-color: var(--cor-bege);
+    border-radius: var(--borda-raio-grande);
+    padding: 48px 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-top: 56px;
+    border: 2px solid var(--cor-borda);
+}
+
+.cta-testemunho__texto h2 {
+    margin-bottom: 10px;
+}
+
+.cta-testemunho__texto p {
+    font-size: 15px;
+    color: var(--cor-texto-medio);
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVO
+----------------------------------------------- */
+
+@media (max-width: 900px) {
+    .testemunhos-grelha {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .resumo-satisfacao__grelha {
+        grid-template-columns: 1fr;
+    }
+    .testemunho-destaque {
+        padding: 36px 30px;
+    }
+    .cta-testemunho {
+        flex-direction: column;
+        text-align: center;
+        padding: 36px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testemunhos-grelha {
+        grid-template-columns: 1fr;
+    }
+}

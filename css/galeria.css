@@ -1,0 +1,156 @@
+.filtros {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.filtros__aba {
+    padding: 8px 24px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 100px;
+    background-color: transparent;
+    color: var(--cor-texto-medio);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--velocidade-transicao);
+}
+
+.filtros__aba:hover,
+.filtros__aba.selecionada {
+    background-color: var(--cor-castanho-fundo);
+    border-color: var(--cor-castanho-fundo);
+    color: var(--cor-bege);
+}
+
+
+/* -----------------------------------------------
+   GRELHA DA GALERIA — layout com tamanhos variados
+----------------------------------------------- */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.galeria__item {
+    border-radius: var(--borda-raio-medio);
+    overflow: hidden;
+    background-color: #E8D5B0;
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* Item que ocupa 2 linhas de altura */
+
+.galeria__item--alto {
+    grid-row: span 2;
+}
+
+
+/* Item que ocupa 2 colunas de largura */
+
+.galeria__item--largo {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.galeria__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 240px;
+    transition: transform .4s ease;
+}
+
+
+/* Zoom suave ao passar o mouse */
+
+.galeria__item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Texto que aparece sobre a imagem ao fazer hover */
+
+.galeria__legenda {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to top, rgba(44, 26, 14, .75) 0%, transparent 55%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.galeria__item:hover .galeria__legenda {
+    opacity: 1;
+}
+
+.galeria__legenda-texto {
+    color: var(--cor-bege);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* -----------------------------------------------
+   CAIXA CTA — chamada para ver produtos
+----------------------------------------------- */
+
+.galeria-cta {
+    background: linear-gradient( 135deg, var(--cor-castanho-fundo) 0%, var(--cor-castanho-normal) 100%);
+    border-radius: var(--borda-raio-grande);
+    padding: 52px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.galeria-cta__titulo {
+    color: var(--cor-bege);
+    margin-bottom: 10px;
+}
+
+.galeria-cta__texto {
+    color: #E8D5B0;
+    font-size: 15px;
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVO
+----------------------------------------------- */
+
+@media (max-width: 900px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .galeria__item--largo {
+        grid-column: auto;
+    }
+    .galeria__item--alto {
+        grid-row: auto;
+    }
+    .galeria-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 36px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+}

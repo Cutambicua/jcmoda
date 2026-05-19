@@ -1,0 +1,110 @@
+.pagina-404 {
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+}
+
+
+/* -----------------------------------------------
+   NÚMERO 404 — grande e decorativo
+----------------------------------------------- */
+
+.pagina-404__ilustracao {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.pagina-404__numero {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(110px, 20vw, 190px);
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient( 135deg, var(--cor-castanho-dourado) 0%, var(--cor-castanho-claro) 100%);
+    /* Aplica o gradiente apenas ao texto */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: .75;
+}
+
+
+/* -----------------------------------------------
+   TEXTO DE ERRO
+----------------------------------------------- */
+
+.pagina-404__titulo {
+    font-size: clamp(20px, 3vw, 30px);
+    color: var(--cor-castanho-fundo);
+    margin-bottom: 12px;
+}
+
+.pagina-404__descricao {
+    color: var(--cor-texto-suave);
+    font-size: 16px;
+    max-width: 460px;
+    margin: 0 auto 34px;
+}
+
+
+/* -----------------------------------------------
+   BOTÕES DE ACÇÃO
+----------------------------------------------- */
+
+.pagina-404__acoes {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+
+/* -----------------------------------------------
+   LINKS RÁPIDOS PARA OUTRAS PÁGINAS
+----------------------------------------------- */
+
+.pagina-404__links {
+    padding-top: 36px;
+    border-top: 1px solid var(--cor-borda);
+    width: 100%;
+    max-width: 560px;
+}
+
+.pagina-404__links-titulo {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+    margin-bottom: 18px;
+}
+
+.pagina-404__links-lista {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Pílula de link */
+
+.pagina-404__link-pill {
+    padding: 7px 18px;
+    border-radius: 100px;
+    border: 1.5px solid var(--cor-borda);
+    font-size: 13px;
+    color: var(--cor-texto-medio);
+    transition: all var(--velocidade-transicao);
+}
+
+.pagina-404__link-pill:hover {
+    background-color: var(--cor-castanho-fundo);
+    border-color: var(--cor-castanho-fundo);
+    color: var(--cor-branco);
+}

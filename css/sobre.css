@@ -1,0 +1,153 @@
+.historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.historia__foto {
+    border-radius: var(--borda-raio-grande);
+    overflow: hidden;
+    box-shadow: var(--sombra-forte);
+    aspect-ratio: 4/3;
+}
+
+.historia__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.historia__paragrafo {
+    margin-top: 14px;
+}
+
+
+/* Caixa escura com a missão */
+
+.historia__missao {
+    background-color: var(--cor-castanho-fundo);
+    border-radius: var(--borda-raio-medio);
+    padding: 26px 30px;
+    margin-top: 28px;
+}
+
+.historia__missao h4 {
+    color: var(--cor-castanho-claro);
+    font-family: var(--fonte-corpo);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.historia__missao p {
+    color: #E8D5B0;
+    font-size: 14px;
+}
+
+
+/* -----------------------------------------------
+   FAIXA DE NÚMEROS — estatísticas da empresa
+----------------------------------------------- */
+
+.numeros {
+    background-color: var(--cor-castanho-dourado);
+    padding: 52px 0;
+}
+
+.numeros__grelha {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.numeros__item {
+    background-color: var(--cor-castanho-dourado);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.numeros__valor {
+    font-family: var(--fonte-titulo);
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--cor-branco);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.numeros__descricao {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cor-bege);
+    opacity: .85;
+}
+
+
+/* -----------------------------------------------
+   VALORES — três cartões com ícone
+----------------------------------------------- */
+
+.valores-grelha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.valor-cartao {
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-raio-medio);
+    padding: 34px 26px;
+    text-align: center;
+    box-shadow: var(--sombra-leve);
+    border-top: 4px solid var(--cor-castanho-dourado);
+    transition: transform var(--velocidade-transicao);
+}
+
+.valor-cartao:hover {
+    transform: translateY(-4px);
+}
+
+.valor-cartao__icone {
+    font-size: 42px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.valor-cartao__titulo {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.valor-cartao__texto {
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVO
+----------------------------------------------- */
+
+@media (max-width: 768px) {
+    .historia {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .valores-grelha {
+        grid-template-columns: 1fr 1fr;
+    }
+    .numeros__grelha {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .valores-grelha {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,145 @@
+.filtros {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    justify-content: center;
+}
+
+.filtros__aba {
+    padding: 8px 24px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 100px;
+    background-color: transparent;
+    color: var(--cor-texto-medio);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--velocidade-transicao);
+}
+
+.filtros__aba:hover,
+.filtros__aba.selecionada {
+    background-color: var(--cor-castanho-fundo);
+    border-color: var(--cor-castanho-fundo);
+    color: var(--cor-bege);
+}
+
+
+/* -----------------------------------------------
+   LAYOUT — sidebar de filtros + grelha de produtos
+----------------------------------------------- */
+
+.pagina-produtos {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* Grelha de 3 colunas dentro da área de produtos */
+
+.area-produtos__grelha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* -----------------------------------------------
+   CARTÃO DE PRODUTO
+----------------------------------------------- */
+
+.produto {
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-raio-medio);
+    overflow: hidden;
+    box-shadow: var(--sombra-leve);
+    position: relative;
+    transition: transform var(--velocidade-transicao), box-shadow var(--velocidade-transicao);
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-forte);
+}
+
+
+/* Etiqueta no canto superior esquerdo */
+
+.produto__etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.produto__etiqueta--novo {
+    background-color: var(--cor-castanho-fundo);
+    color: var(--cor-bege);
+}
+
+.produto__etiqueta--promocao {
+    background-color: #8B0000;
+    color: var(--cor-branco);
+}
+
+.produto__foto {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background-color: var(--cor-bege);
+}
+
+.produto__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.produto__info {
+    padding: 16px 18px 20px;
+}
+
+.produto__nome {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.produto__preco {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cor-castanho-dourado);
+    margin-bottom: 14px;
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVO
+----------------------------------------------- */
+
+@media (max-width: 900px) {
+    .pagina-produtos {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: static;
+    }
+    .area-produtos__grelha {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .area-produtos__grelha {
+        grid-template-columns: 1fr;
+    }
+}

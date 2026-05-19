@@ -1,0 +1,607 @@
+:root {
+    /* Tons de castanho */
+    --cor-castanho-escuro: #1A0800;
+    --cor-castanho-fundo: #2C1A0E;
+    --cor-castanho-medio: #6B3A1F;
+    --cor-castanho-normal: #8B5E3C;
+    --cor-castanho-dourado: #C07840;
+    --cor-castanho-claro: #D4A574;
+    --cor-bege: #F5ECD7;
+    --cor-bege-fundo: #FAF5EC;
+    --cor-borda: #E0C8A0;
+    --cor-branco: #FFFFFF;
+    /* Cores de texto */
+    --cor-texto: #1A0800;
+    --cor-texto-medio: #5A3A22;
+    --cor-texto-suave: #9E7A5A;
+    /* Fontes */
+    --fonte-titulo: Georgia, 'Times New Roman', serif;
+    --fonte-corpo: Arial, Helvetica, sans-serif;
+    /* Sombras */
+    --sombra-leve: 0 2px 8px rgba(44, 26, 14, .08);
+    --sombra-media: 0 6px 24px rgba(44, 26, 14, .13);
+    --sombra-forte: 0 16px 48px rgba(44, 26, 14, .18);
+    /* Bordas arredondadas */
+    --borda-raio-pequeno: 4px;
+    --borda-raio-medio: 8px;
+    --borda-raio-grande: 16px;
+    /* Velocidade das animações */
+    --velocidade-transicao: .22s ease;
+    /* Largura máxima do conteúdo */
+    --largura-maxima: 1280px;
+}
+
+
+/* -----------------------------------------------
+   RESET — remove margens e estilos padrão
+----------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--cor-texto);
+    background-color: var(--cor-bege-fundo);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+/* -----------------------------------------------
+   TIPOGRAFIA — títulos e parágrafos
+----------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--cor-castanho-fundo);
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 58px);
+}
+
+h2 {
+    font-size: clamp(24px, 3.5vw, 40px);
+}
+
+h3 {
+    font-size: clamp(18px, 2.5vw, 24px);
+}
+
+h4 {
+    font-size: 17px;
+}
+
+p {
+    color: var(--cor-texto-medio);
+    font-weight: 300;
+}
+
+
+/* -----------------------------------------------
+   UTILITÁRIOS — classes de ajuda reutilizáveis
+----------------------------------------------- */
+
+
+/* Texto pequeno acima dos títulos de secção */
+
+.rotulo {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cor-castanho-dourado);
+    margin-bottom: 10px;
+}
+
+
+/* Linha castanha decorativa abaixo dos títulos */
+
+.linha-titulo {
+    width: 48px;
+    height: 3px;
+    background-color: var(--cor-castanho-dourado);
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
+
+
+/* Versão centrada da linha */
+
+.linha-titulo--centrada {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Texto apenas para leitores de ecrã (acessibilidade) */
+
+.invisivel-visual {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+/* Centro do conteúdo da secção */
+
+.secao-centrada {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+
+/* Parágrafo de descrição abaixo do título */
+
+.descricao-secao {
+    color: var(--cor-texto-suave);
+    font-size: 15px;
+    margin-bottom: 48px;
+}
+
+
+/* -----------------------------------------------
+   CONTENTOR — limita e centra o conteúdo
+----------------------------------------------- */
+
+.contentor {
+    width: 100%;
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+/* -----------------------------------------------
+   SECÇÕES — blocos de conteúdo verticais
+----------------------------------------------- */
+
+.secao {
+    padding: 80px 0;
+}
+
+.secao--fundo-bege {
+    background-color: var(--cor-bege);
+}
+
+.secao--fundo-escuro {
+    background-color: var(--cor-castanho-fundo);
+}
+
+
+/* -----------------------------------------------
+   BOTÕES
+----------------------------------------------- */
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 32px;
+    border-radius: var(--borda-raio-pequeno);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--velocidade-transicao);
+    text-decoration: none;
+}
+
+
+/* Botão principal — fundo castanho dourado */
+
+.botao--principal {
+    background-color: var(--cor-castanho-dourado);
+    color: var(--cor-branco);
+    border-color: var(--cor-castanho-dourado);
+}
+
+.botao--principal:hover {
+    background-color: var(--cor-castanho-normal);
+    border-color: var(--cor-castanho-normal);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-media);
+}
+
+
+/* Botão de contorno — transparente com borda */
+
+.botao--contorno {
+    background-color: transparent;
+    color: var(--cor-castanho-fundo);
+    border-color: var(--cor-castanho-fundo);
+}
+
+.botao--contorno:hover {
+    background-color: var(--cor-castanho-fundo);
+    color: var(--cor-branco);
+}
+
+
+/* Botão de contorno claro — para fundos escuros */
+
+.botao--contorno-claro {
+    background-color: transparent;
+    color: var(--cor-bege);
+    border-color: var(--cor-castanho-claro);
+}
+
+.botao--contorno-claro:hover {
+    background-color: var(--cor-castanho-dourado);
+    border-color: var(--cor-castanho-dourado);
+    color: var(--cor-branco);
+}
+
+
+/* Botão pequeno */
+
+.botao--pequeno {
+    padding: 9px 20px;
+    font-size: 11px;
+}
+
+
+/* Botão que ocupa toda a largura */
+
+.botao--completo {
+    width: 100%;
+    justify-content: center;
+}
+
+
+/* -----------------------------------------------
+   NAVEGAÇÃO — barra no topo de todas as páginas
+----------------------------------------------- */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--cor-castanho-fundo);
+    box-shadow: 0 2px 20px rgba(26, 8, 0, .35);
+}
+
+.nav__interior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 66px;
+}
+
+
+/* Logo JCModa */
+
+.nav__logo {
+    font-family: var(--fonte-titulo);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--cor-bege);
+    letter-spacing: 3px;
+}
+
+
+/* Lista de links */
+
+.nav__lista {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.nav__lista a {
+    color: var(--cor-castanho-claro);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 7px 11px;
+    border-radius: var(--borda-raio-pequeno);
+    transition: color var(--velocidade-transicao), background-color var(--velocidade-transicao);
+}
+
+.nav__lista a:hover,
+.nav__lista a.pagina-atual {
+    color: var(--cor-bege);
+    background-color: var(--cor-castanho-medio);
+}
+
+
+/* Ícones de pesquisa e carrinho */
+
+.nav__icones {
+    display: flex;
+    gap: 14px;
+}
+
+.nav__icone {
+    color: var(--cor-castanho-claro);
+    font-size: 18px;
+    cursor: pointer;
+    transition: color var(--velocidade-transicao);
+}
+
+.nav__icone:hover {
+    color: var(--cor-bege);
+}
+
+
+/* -----------------------------------------------
+   CABEÇALHO DE PÁGINA INTERNA
+   Aparece no topo das páginas que não são a home
+----------------------------------------------- */
+
+.cabecalho-pagina {
+    background: linear-gradient(135deg, var(--cor-castanho-fundo) 0%, var(--cor-castanho-medio) 100%);
+    padding: 64px 0;
+    text-align: center;
+}
+
+.cabecalho-pagina h1 {
+    color: var(--cor-bege);
+    margin-bottom: 10px;
+}
+
+.cabecalho-pagina p {
+    color: var(--cor-castanho-claro);
+    font-size: 16px;
+}
+
+
+/* -----------------------------------------------
+   NEWSLETTER — formulário de email
+----------------------------------------------- */
+
+.newsletter {
+    background-color: var(--cor-castanho-fundo);
+    padding: 64px 0;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: var(--cor-bege);
+    margin-bottom: 10px;
+}
+
+.newsletter__descricao {
+    color: var(--cor-castanho-claro);
+    margin-bottom: 36px;
+}
+
+.newsletter__formulario {
+    display: flex;
+    max-width: 480px;
+    margin: 0 auto 14px;
+    overflow: hidden;
+    border-radius: var(--borda-raio-pequeno);
+    box-shadow: var(--sombra-forte);
+}
+
+.newsletter__email {
+    flex: 1;
+    padding: 14px 18px;
+    border: 1px solid rgba(212, 165, 116, .2);
+    border-right: none;
+    background-color: rgba(245, 236, 215, .1);
+    color: var(--cor-bege);
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter__email::placeholder {
+    color: var(--cor-castanho-claro);
+    opacity: .7;
+}
+
+.newsletter__nota {
+    font-size: 12px;
+    color: var(--cor-texto-suave);
+    opacity: .75;
+}
+
+.newsletter__nota a {
+    color: var(--cor-castanho-claro);
+    text-decoration: underline;
+}
+
+
+/* -----------------------------------------------
+   REDES SOCIAIS — ícones circulares
+----------------------------------------------- */
+
+.redes-sociais {
+    display: flex;
+    gap: 12px;
+}
+
+.redes-sociais__icone {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--cor-castanho-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-castanho-claro);
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color var(--velocidade-transicao), border-color var(--velocidade-transicao), color var(--velocidade-transicao);
+}
+
+.redes-sociais__icone:hover {
+    background-color: var(--cor-castanho-dourado);
+    border-color: var(--cor-castanho-dourado);
+    color: var(--cor-branco);
+}
+
+
+/* -----------------------------------------------
+   RODAPÉ
+----------------------------------------------- */
+
+.rodape {
+    background-color: var(--cor-castanho-escuro);
+    padding: 60px 0 24px;
+}
+
+.rodape__grelha {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(212, 165, 116, .12);
+    margin-bottom: 24px;
+}
+
+.rodape__marca h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 24px;
+    color: var(--cor-bege);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.rodape__marca p {
+    color: var(--cor-texto-suave);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.rodape__coluna-titulo {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--cor-castanho-claro);
+    margin-bottom: 16px;
+}
+
+.rodape__coluna li {
+    margin-bottom: 9px;
+}
+
+.rodape__coluna li a {
+    color: var(--cor-texto-suave);
+    font-size: 13px;
+    transition: color var(--velocidade-transicao);
+}
+
+.rodape__coluna li a:hover {
+    color: var(--cor-castanho-claro);
+}
+
+.rodape__contacto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.rodape__contacto-item span {
+    color: var(--cor-castanho-dourado);
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.rodape__contacto-item p {
+    color: var(--cor-texto-suave);
+    font-size: 13px;
+}
+
+.rodape__direitos {
+    text-align: center;
+    color: var(--cor-texto-suave);
+    font-size: 12px;
+    opacity: .65;
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVO — adaptações para ecrãs pequenos
+----------------------------------------------- */
+
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .rodape__grelha {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+}
+
+
+/* Telemóvel — esconde menu de navegação */
+
+@media (max-width: 768px) {
+    .contentor {
+        padding: 0 20px;
+    }
+    .nav__lista {
+        display: none;
+    }
+    .rodape__grelha {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+
+/* Telemóvel pequeno */
+
+@media (max-width: 480px) {
+    .newsletter__formulario {
+        flex-direction: column;
+    }
+    .newsletter__email {
+        border-right: 1px solid rgba(212, 165, 116, .2);
+        border-bottom: none;
+    }
+}

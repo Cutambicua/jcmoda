@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5E3C"/><stop offset="100%" style="stop-color:#D4A574"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg)"/>
+  <!-- Trend fashion collage -->
+  <rect x="20" y="20" width="170" height="300" rx="8" fill="#C07840" opacity="0.7"/>
+  <rect x="210" y="20" width="170" height="145" rx="8" fill="#3E1F00" opacity="0.8"/>
+  <rect x="210" y="175" width="170" height="145" rx="8" fill="#8B5E3C" opacity="0.8"/>
+  <rect x="400" y="20" width="175" height="300" rx="8" fill="#D4A574" opacity="0.6"/>
+  <!-- Decorative patterns -->
+  <circle cx="105" cy="170" r="60" fill="none" stroke="#F5ECD7" stroke-width="2" opacity="0.5"/>
+  <circle cx="105" cy="170" r="40" fill="none" stroke="#F5ECD7" stroke-width="1" opacity="0.3"/>
+  <!-- Diamond pattern -->
+  <polygon points="487,100 530,60 573,100 530,140" fill="none" stroke="#F5ECD7" stroke-width="2" opacity="0.5"/>
+  <polygon points="487,210 530,170 573,210 530,250" fill="none" stroke="#F5ECD7" stroke-width="2" opacity="0.5"/>
+  <!-- Text -->
+  <text x="300" y="172" text-anchor="middle" font-family="serif" font-size="22" fill="#F5ECD7" letter-spacing="3">TENDÊNCIAS</text>
+  <text x="300" y="198" text-anchor="middle" font-family="serif" font-size="14" fill="#F5ECD7" opacity="0.8">2026</text>
+  <rect x="0" y="0" width="600" height="340" fill="#2C1A0E" opacity="0.2"/>
+</svg>

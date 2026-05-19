@@ -1,0 +1,258 @@
+.contactos-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+/* -----------------------------------------------
+   FORMULÁRIO DE CONTACTO
+----------------------------------------------- */
+
+.formulario__descricao {
+    margin-bottom: 30px;
+}
+
+
+/* Linha com dois campos lado a lado */
+
+.formulario__linha-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.formulario__grupo {
+    margin-bottom: 20px;
+}
+
+.formulario__rotulo {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--cor-texto-medio);
+    margin-bottom: 7px;
+}
+
+
+/* Estilo comum a todos os campos */
+
+.formulario__campo,
+.formulario__select,
+.formulario__mensagem {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid var(--cor-borda);
+    border-radius: var(--borda-raio-pequeno);
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+    font-size: 14px;
+    outline: none;
+    transition: border-color var(--velocidade-transicao);
+}
+
+.formulario__campo:focus,
+.formulario__select:focus,
+.formulario__mensagem:focus {
+    border-color: var(--cor-castanho-dourado);
+}
+
+.formulario__mensagem {
+    min-height: 135px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.formulario__select {
+    cursor: pointer;
+}
+
+
+/* -----------------------------------------------
+   CAIXA DE INFORMAÇÕES DE CONTACTO
+----------------------------------------------- */
+
+.info-contacto {
+    background-color: var(--cor-castanho-fundo);
+    border-radius: var(--borda-raio-grande);
+    padding: 38px 34px;
+}
+
+.info-contacto__titulo {
+    color: var(--cor-bege);
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.info-contacto__intro {
+    color: var(--cor-castanho-claro);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+
+/* Cada item de contacto (ícone + texto) */
+
+.info-contacto__item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.info-contacto__icone {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(192, 120, 64, .2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.info-contacto__rotulo {
+    display: block;
+    font-family: var(--fonte-corpo);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--cor-castanho-claro);
+    margin-bottom: 3px;
+}
+
+.info-contacto__valor {
+    color: var(--cor-bege);
+    font-size: 14px;
+    opacity: .85;
+}
+
+
+/* -----------------------------------------------
+   CAIXA DE HORÁRIOS
+----------------------------------------------- */
+
+.horario {
+    background-color: rgba(255, 255, 255, .06);
+    border-radius: var(--borda-raio-medio);
+    padding: 16px 20px;
+    margin-top: 24px;
+}
+
+.horario__titulo {
+    display: block;
+    font-family: var(--fonte-corpo);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--cor-castanho-claro);
+    margin-bottom: 10px;
+}
+
+.horario__linha {
+    color: var(--cor-bege);
+    font-size: 13px;
+    opacity: .8;
+    margin-bottom: 4px;
+}
+
+.horario__linha--encerrado {
+    color: var(--cor-castanho-claro);
+    opacity: 1;
+}
+
+
+/* -----------------------------------------------
+   BLOCO DE REDES SOCIAIS
+----------------------------------------------- */
+
+.redes-contacto {
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-raio-medio);
+    padding: 28px 26px;
+    box-shadow: var(--sombra-leve);
+    margin-top: 22px;
+    text-align: center;
+}
+
+.redes-contacto__titulo {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.redes-contacto__descricao {
+    font-size: 13px;
+    color: var(--cor-texto-suave);
+    margin-bottom: 18px;
+}
+
+.redes-contacto__lista {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+/* Botão de rede social maior */
+
+.rede-botao {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--borda-raio-medio);
+    border: 1.5px solid var(--cor-borda);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--cor-castanho-normal);
+    transition: all var(--velocidade-transicao);
+}
+
+.rede-botao:hover {
+    background-color: var(--cor-castanho-fundo);
+    border-color: var(--cor-castanho-fundo);
+    color: var(--cor-branco);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+.rede-botao--facebook:hover {
+    background-color: #1877F2;
+    border-color: #1877F2;
+}
+
+.rede-botao--instagram:hover {
+    background-color: #E1306C;
+    border-color: #E1306C;
+}
+
+.rede-botao--tiktok:hover {
+    background-color: #010101;
+    border-color: #010101;
+}
+
+.rede-botao--whatsapp:hover {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+
+/* -----------------------------------------------
+   RESPONSIVO
+----------------------------------------------- */
+
+@media (max-width: 900px) {
+    .contactos-layout {
+        grid-template-columns: 1fr;
+    }
+    .formulario__linha-dupla {
+        grid-template-columns: 1fr;
+    }
+}
