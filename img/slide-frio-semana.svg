@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Destaques da semana JCModa</title>
+  <desc id="desc">Composicao ficticia com casaco, blusa, saia longa e tenis em tons castanhos.</desc>
+  <rect width="1600" height="900" fill="#F5ECD7"/>
+  <circle cx="1260" cy="160" r="260" fill="#E8D5B0"/>
+  <circle cx="1320" cy="720" r="210" fill="#D4A574" opacity=".45"/>
+  <rect x="780" y="168" width="250" height="520" rx="56" fill="#8B5E3C"/>
+  <path d="M840 168h130l86 196-42 30-44-104v398H840V290l-48 104-42-30 90-196z" fill="#6B3A1F"/>
+  <path d="M870 214h70l34 90H836l34-90z" fill="#C07840"/>
+  <path d="M1070 275h170l74 404H996l74-404z" fill="#C07840"/>
+  <path d="M1104 315h102l35 318h-174l37-318z" fill="#F5ECD7" opacity=".22"/>
+  <rect x="1182" y="650" width="188" height="42" rx="21" fill="#2C1A0E"/>
+  <rect x="1022" y="650" width="154" height="42" rx="21" fill="#2C1A0E"/>
+  <rect x="520" y="235" width="170" height="360" rx="64" fill="#D4A574"/>
+  <path d="M530 240h150l54 125-42 24-24-58v264H542V331l-26 58-42-24 56-125z" fill="#C07840"/>
+  <rect x="485" y="612" width="152" height="43" rx="21" fill="#FFFFFF"/>
+  <rect x="625" y="612" width="152" height="43" rx="21" fill="#FFFFFF"/>
+  <path d="M508 641h260" stroke="#2C1A0E" stroke-width="10" stroke-linecap="round"/>
+  <rect x="112" y="122" width="410" height="96" rx="8" fill="#2C1A0E"/>
+  <rect x="112" y="250" width="480" height="22" rx="11" fill="#6B3A1F"/>
+  <rect x="112" y="298" width="390" height="22" rx="11" fill="#8B5E3C"/>
+  <rect x="112" y="346" width="320" height="22" rx="11" fill="#C07840"/>
+</svg>

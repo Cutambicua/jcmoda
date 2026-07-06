@@ -27,7 +27,7 @@ em sala de aula, cumprindo os seguintes critérios de avaliação:
 
 - HTML5
 - CSS3 puro (sem frameworks)
-- Zero JavaScript (Etapa 1)
+- JavaScript 
 
 ## Estrutura do Projecto
 jcmoda/

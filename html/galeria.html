@@ -61,75 +61,93 @@
 
                 <!-- Filtros rápidos -->
                 <div class="filtros">
-                    <button class="filtros__aba selecionada">Todos</button>
-                    <button class="filtros__aba">Roupas</button>
-                    <button class="filtros__aba">Calçados</button>
+                    <button class="filtros__aba selecionada" data-filtro-galeria="todos">Todos</button>
+                    <button class="filtros__aba" data-filtro-galeria="roupas">Roupas</button>
+                    <button class="filtros__aba" data-filtro-galeria="calcado-feminino">Calçado feminino</button>
+                    <button class="filtros__aba" data-filtro-galeria="calcado-masculino">Calçado masculino</button>
+                    <button class="filtros__aba" data-filtro-galeria="mulher">Mulher</button>
+                    <button class="filtros__aba" data-filtro-galeria="homem">Homem</button>
+                </div>
+
+                <div class="galeria-secoes">
+                    <div class="galeria-secoes__item">
+                        <span>Roupas</span>
+                        <p>Vestidos, blusas, camisas e combinações casuais.</p>
+                    </div>
+                    <div class="galeria-secoes__item">
+                        <span>Calçados</span>
+                        <p>Sapatos sociais e ténis para completar o look.</p>
+                    </div>
+                    <div class="galeria-secoes__item">
+                        <span>Looks</span>
+                        <p>Inspirações para trabalho, passeio e dias frescos.</p>
+                    </div>
                 </div>
 
                 <!-- Grelha de imagens -->
                 <div class="galeria">
 
-                    <div class="galeria__item galeria__item--alto">
+                    <div class="galeria__item galeria__item--alto" data-categorias="roupas homem frio">
                         <img src="../img/gal1.png" alt="Look JCModa — casaco caramel elegante">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Look Outono</span>
                         </div>
                     </div>
 
-                    <div class="galeria__item">
+                    <div class="galeria__item" data-categorias="roupas mulher formal">
                         <img src="../img/gal2.png" alt="Look JCModa — traje formal castanho">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Formal</span>
                         </div>
                     </div>
 
-                    <div class="galeria__item">
+                    <div class="galeria__item" data-categorias=" mulher casual">
                         <img src="../img/gal3.png" alt="Look JCModa — conjunto nude elegante">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Casual Chic</span>
                         </div>
                     </div>
 
-                    <div class="galeria__item">
+                    <div class="galeria__item" data-categorias="calcado-feminino mulher formal">
                         <img src="../img/gal4.png" alt="JCModa — colecção de calçados castanhos">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Calçados</span>
                         </div>
                     </div>
 
-                    <div class="galeria__item">
+                    <div class="galeria__item" data-categorias=" calcado-feminino mulher casual">
                         <img src="../img/gal11.png" alt="Casal em looks JCModa combinados">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Look Casal</span>
                         </div>
                     </div>
-                    <div class="galeria__item">
+                    <div class="galeria__item" data-categorias="calcado-feminino calcado-masculino homem mulher casual">
                         <img src="../img/prod-tenisC.png" alt="Casal em looks JCModa combinados">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Look Casal</span>
                         </div>
                     </div>
-                    <div class="galeria__item">
+                    <div class="galeria__item" data-categorias="roupas homem mulher casual">
                         <img src="../img/prod_tshirt.png" alt="Casal em looks JCModa combinados">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Look Casal</span>
                         </div>
                     </div>
-                    <div class="galeria__item">
+                    <div class="galeria__item" data-categorias=" mulher frio">
                         <img src="../img/gal8.png" alt="Casal em looks JCModa combinados">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Look Casal</span>
                         </div>
                     </div>
 
-                    <div class="galeria__item galeria__item--largo">
+                    <div class="galeria__item galeria__item--largo" data-categorias="roupas mulher vestidos formal">
                         <img src="../img/gal9.png" alt="Look JCModa — vestido elegante com acessórios">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Look Noite</span>
                         </div>
                     </div>
 
-                    <div class="galeria__item galeria__item--alto">
+                    <div class="galeria__item galeria__item--alto" data-categorias="roupas mulher frio">
                         <img src="../img/gal10.png" alt="Look JCModa — casaco caramel elegante">
                         <div class="galeria__legenda">
                             <span class="galeria__legenda-texto">Look Outono</span>
@@ -233,6 +251,8 @@
         </div>
     </footer>
 
+    <script src="../js/site.js"></script>
+    <script src="../js/galeria.js"></script>
 </body>
 
 </html>

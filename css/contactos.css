@@ -243,6 +243,26 @@
     border-color: #25D366;
 }
 
+.mapa-contacto {
+    margin-top: 22px;
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-raio-medio);
+    padding: 18px;
+    box-shadow: var(--sombra-leve);
+}
+
+.mapa-contacto__titulo {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.mapa-contacto iframe {
+    width: 100%;
+    min-height: 260px;
+    border: 0;
+    border-radius: var(--borda-raio-pequeno);
+}
+
 
 /* -----------------------------------------------
    RESPONSIVO

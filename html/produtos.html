@@ -56,9 +56,12 @@
 
                 <!-- Filtros rápidos no topo -->
                 <div class="filtros">
-                    <button class="filtros__aba selecionada">Todos</button>
-                    <button class="filtros__aba">Roupas</button>
-                    <button class="filtros__aba">Calçados</button>
+                    <button class="filtros__aba selecionada" data-filtro-produto="todos">Todos</button>
+                    <button class="filtros__aba" data-filtro-produto="mulher">Mulher</button>
+                    <button class="filtros__aba" data-filtro-produto="homem">Homem</button>
+                    <button class="filtros__aba" data-filtro-produto="vestidos">Vestidos</button>
+                    <button class="filtros__aba" data-filtro-produto="calcado-feminino">Calçado feminino</button>
+                    <button class="filtros__aba" data-filtro-produto="calcado-masculino">Calçado masculino</button>
                 </div>
 
                 <!-- Layout: sidebar à esquerda, produtos à direita -->
@@ -69,7 +72,7 @@
                     <!-- Grelha de produtos -->
                     <div class="area-produtos__grelha">
 
-                        <article class="produto">
+                        <article class="produto" data-categorias="roupas homem mulher casual">
                             <span class="produto__etiqueta produto__etiqueta--novo">Novo</span>
                             <div class="produto__foto">
                                 <img src="../img/prod_tshirt.png" alt="T-Shirt clássica castanha">
@@ -77,22 +80,24 @@
                             <div class="produto__info">
                                 <h4 class="produto__nome">T-Shirt Clássica</h4>
                                 <p class="produto__preco">500 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Algodão leve, ideal para looks casuais.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
 
-                        <article class="produto">
+                        <article class="produto" data-categorias="roupas mulher vestidos frio">
                             <div class="produto__foto">
                                 <img src="../img/prod-dress.png" alt="Vestido elegante caramel">
                             </div>
                             <div class="produto__info">
                                 <h4 class="produto__nome">Vestido Elegante</h4>
                                 <p class="produto__preco">1.200 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Crepe elegante para eventos e noites frescas.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
 
-                        <article class="produto">
+                        <article class="produto" data-categorias="calcado-feminino calcado-masculino homem mulher casual">
                             <span class="produto__etiqueta produto__etiqueta--promocao">Promoção</span>
                             <div class="produto__foto">
                                 <img src="../img/prod-shoes.png" alt="Ténis desportivo branco">
@@ -100,22 +105,24 @@
                             <div class="produto__info">
                                 <h4 class="produto__nome">Ténis Desportivo</h4>
                                 <p class="produto__preco">2.500 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Conforto para caminhar e combinar com tudo.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
 
-                        <article class="produto">
+                        <article class="produto" data-categorias="calcado-masculino homem formal">
                             <div class="produto__foto">
                                 <img src="../img/prod-shoe.png" alt="Sapato social castanho">
                             </div>
                             <div class="produto__info">
                                 <h4 class="produto__nome">Sapato Social</h4>
                                 <p class="produto__preco">3.000 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Acabamento social para trabalho e cerimônias.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
 
-                        <article class="produto">
+                        <article class="produto" data-categorias="roupas homem formal frio">
                             <span class="produto__etiqueta produto__etiqueta--novo">Novo</span>
                             <div class="produto__foto">
                                 <img src="../img/prod-camisa.png" alt="Camisa formal branca">
@@ -123,33 +130,36 @@
                             <div class="produto__info">
                                 <h4 class="produto__nome">Camisa Formal</h4>
                                 <p class="produto__preco">800 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Camisa versátil para escritório e encontros.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
 
-                        <article class="produto">
+                        <article class="produto" data-categorias="roupas mulher vestidos casual">
                             <div class="produto__foto">
                                 <img src="../img/prod-vestidoC.png" alt="Vestido casual">
                             </div>
                             <div class="produto__info">
                                 <h4 class="produto__nome">Vestido Casual</h4>
                                 <p class="produto__preco">950 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Leve, prático e confortável para o dia.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
 
-                        <article class="produto">
+                        <article class="produto" data-categorias="calcado-feminino calcado-masculino homem mulher casual">
                             <div class="produto__foto">
                                 <img src="../img/prod-tenisC.png" alt="Ténis casual">
                             </div>
                             <div class="produto__info">
                                 <h4 class="produto__nome">Ténis Casual</h4>
                                 <p class="produto__preco">1.800 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Modelo casual para escola, passeio e compras.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
 
-                        <article class="produto">
+                        <article class="produto" data-categorias="roupas mulher frio casual">
                             <span class="produto__etiqueta produto__etiqueta--promocao">Promoção</span>
                             <div class="produto__foto">
                                 <img src="../img/prod-saia.png" alt="T-Shirt premium">
@@ -157,10 +167,11 @@
                             <div class="produto__info">
                                 <h4 class="produto__nome">Saia Longa</h4>
                                 <p class="produto__preco">650 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Saia longa para composições elegantes e frescas.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
-                        <article class="produto">
+                        <article class="produto" data-categorias="roupas mulher casual frio">
                             <span class="produto__etiqueta produto__etiqueta--promocao">Promoção</span>
                             <div class="produto__foto">
                                 <img src="../img/prod-blusa.png" alt="T-Shirt premium">
@@ -168,7 +179,8 @@
                             <div class="produto__info">
                                 <h4 class="produto__nome">Blusa Casual</h4>
                                 <p class="produto__preco">650 Kz</p>
-                                <a href="contactos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                                <p class="produto__resumo">Blusa simples para combinar com saias e calças.</p>
+                                <button type="button" class="botao botao--principal botao--pequeno botao--completo js-ver-produto">Ver Mais</button>
                             </div>
                         </article>
 
@@ -199,7 +211,6 @@
         </section>
 
     </main>
-
 
     <!-- RODAPÉ -->
     <footer class="rodape">
@@ -260,6 +271,8 @@
         </div>
     </footer>
 
+    <script src="../js/site.js"></script>
+    <script src="../js/produtos.js"></script>
 </body>
 
 </html>

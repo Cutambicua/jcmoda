@@ -41,7 +41,64 @@
     <main>
 
         <!-- ============================HERO — secção de boas-vindas==================== -->
-        <section class="hero">
+        <section class="hero carrossel-frio" aria-label="Destaques da JCModa">
+
+            <div class="contentor hero-carrossel__contentor">
+                <div class="carrossel-frio__janela">
+                    <article class="carrossel-frio__slide carrossel-frio__slide--ativo">
+                        <img src="../img/gal3.png" alt="Destaques da semana JCModa com casaco, saia longa, blusa e tenis" loading="eager">
+                        <div class="carrossel-frio__conteudo">
+                            <span class="hero__etiqueta">Destaques da semana</span>
+                            <h1 class="hero__titulo">Looks prontos para o tempo frio</h1>
+                            <p class="hero__subtitulo">Casacos, saias longas, blusas e tenis confortaveis para entrar na nova epoca com estilo.</p>
+                            <a href="produtos.html" class="botao botao--principal">Ver Produtos</a>
+                        </div>
+                    </article>
+
+                    <article class="carrossel-frio__slide">
+                        <img src="../img/gal2.png" alt="Destaques do mes JCModa com vestido, camisa e sapato social">
+                        <div class="carrossel-frio__conteudo">
+                            <span class="hero__etiqueta">Destaques do mes</span>
+                            <h1 class="hero__titulo">Elegancia para trabalho e eventos</h1>
+                            <p class="hero__subtitulo">Vestidos, camisas e sapatos sociais pensados para rotinas formais e ocasioes especiais.</p>
+                            <a href="produtos.html" class="botao botao--principal">Explorar Colecao</a>
+                        </div>
+                    </article>
+
+                    <article class="carrossel-frio__slide">
+                        <img src="../img/hero.png" alt="Destaques da epoca JCModa com looks masculino e feminino">
+                        <div class="carrossel-frio__conteudo">
+                            <span class="hero__etiqueta">Destaques da epoca</span>
+                            <h1 class="hero__titulo">Moda para homem e mulher</h1>
+                            <p class="hero__subtitulo">Pecas versateis em tons quentes, faceis de combinar e adequadas ao publico angolano.</p>
+                            <a href="galeria.html" class="botao botao--principal">Ver Galeria</a>
+                        </div>
+                    </article>
+
+                    <article class="carrossel-frio__slide">
+                        <img src="../img/gal4.png" alt="Destaques do mes JCModa com vestido, camisa e sapato social">
+                        <div class="carrossel-frio__conteudo">
+                            <span class="hero__etiqueta">Destaques do mes</span>
+                            <h1 class="hero__titulo">Elegancia para trabalho e eventos</h1>
+                            <p class="hero__subtitulo">Vestidos, camisas e sapatos sociais pensados para rotinas formais e ocasioes especiais.</p>
+                            <a href="produtos.html" class="botao botao--principal">Explorar Colecao</a>
+                        </div>
+                    </article>
+
+                    <button class="carrossel-frio__controlo carrossel-frio__controlo--anterior" type="button" aria-label="Slide anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carrossel-frio__controlo carrossel-frio__controlo--proximo" type="button" aria-label="Proximo slide">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="carrossel-frio__indicadores" aria-label="Selecionar destaque">
+                    <button class="carrossel-frio__indicador carrossel-frio__indicador--ativo" type="button" aria-label="Ver destaque 1"></button>
+                    <button class="carrossel-frio__indicador" type="button" aria-label="Ver destaque 2"></button>
+                    <button class="carrossel-frio__indicador" type="button" aria-label="Ver destaque 3"></button>
+                </div>
+            </div>
 
             <img class="hero__imagem" src="../img/hero.png" alt="Casal elegante vestindo roupas JCModa" loading="eager">
 
@@ -61,6 +118,61 @@
         </section>
 
 
+        <!-- ============================ CARROSSEL TEMPO FRIO ==================== -->
+        <section class="secao carrossel-frio" aria-label="Destaques para tempo frio">
+            <div class="contentor">
+                <div class="destaques__cabecalho">
+                    <div>
+                        <span class="rotulo">Destaques do frio</span>
+                        <h2>Peças para dias frescos</h2>
+                    </div>
+                    <a href="produtos.html" class="botao botao--contorno">Ver coleção</a>
+                </div>
+
+                <div class="carrossel-frio__janela">
+                    <article class="carrossel-frio__slide carrossel-frio__slide--ativo">
+                        <img src="../img/gal1.png" alt="Casaco caramel elegante para tempo frio">
+                        <div class="carrossel-frio__conteudo">
+                            <span class="rotulo">Look completo</span>
+                            <h3>Casacos e tons caramel</h3>
+                            <p>Combina conforto e elegância para noites frescas em Luanda.</p>
+                        </div>
+                    </article>
+
+                    <article class="carrossel-frio__slide">
+                        <img src="../img/prod-saia.png" alt="Saia longa para looks de tempo frio">
+                        <div class="carrossel-frio__conteudo">
+                            <span class="rotulo">Mulher</span>
+                            <h3>Saias longas e blusas</h3>
+                            <p>Peças fáceis de combinar para manter o estilo sem perder conforto.</p>
+                        </div>
+                    </article>
+
+                    <article class="carrossel-frio__slide">
+                        <img src="../img/prod-camisa.png" alt="Camisa formal para dias frescos">
+                        <div class="carrossel-frio__conteudo">
+                            <span class="rotulo">Homem</span>
+                            <h3>Camisas para rotina formal</h3>
+                            <p>Opções práticas para trabalho, estudo e eventos sociais.</p>
+                        </div>
+                    </article>
+
+                    <button class="carrossel-frio__controlo carrossel-frio__controlo--anterior" type="button" aria-label="Slide anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carrossel-frio__controlo carrossel-frio__controlo--proximo" type="button" aria-label="Próximo slide">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="carrossel-frio__indicadores" aria-label="Selecionar destaque">
+                    <button class="carrossel-frio__indicador carrossel-frio__indicador--ativo" type="button" aria-label="Ver destaque 1"></button>
+                    <button class="carrossel-frio__indicador" type="button" aria-label="Ver destaque 2"></button>
+                    <button class="carrossel-frio__indicador" type="button" aria-label="Ver destaque 3"></button>
+                </div>
+            </div>
+        </section>
+
 
         <!-- ===================================PRODUTOS EM DESTAQUE============================== -->
         <section class="secao secao--fundo-bege">
@@ -68,61 +180,57 @@
 
                 <div class="destaques__cabecalho">
                     <div>
-                        <span class="rotulo">Coleção em destaque</span>
-                        <h2>Destaques</h2>
+                        <span class="rotulo">Navegação rápida</span>
+                        <h2>Compre por categoria</h2>
                     </div>
-                    <a href="produtos.html" class="botao botao--contorno">Ver todos</a>
+                    <a href="produtos.html" class="botao botao--contorno">Ver produtos</a>
                 </div>
 
-                <div class="destaques__filtros">
-                    <button class="destaques__aba selecionada">Todos</button>
-                    <button class="destaques__aba">Roupas</button>
-                    <button class="destaques__aba">Calçados</button>
-                </div>
+                <p class="categorias-home__intro">Escolha rapidamente o tipo de peça que procura e avance para a página de produtos com mais facilidade.</p>
 
                 <div class="destaques__grelha">
 
                     <article class="produto">
                         <div class="produto__foto">
-                            <img src="../img/prod_tshirt.png" alt="T-Shirt clássica castanha">
+                            <img src="../img/prod-dress.png" alt="Categoria de moda feminina JCModa">
                         </div>
                         <div class="produto__info">
-                            <h4 class="produto__nome">T-Shirt Clássica</h4>
-                            <p class="produto__preco">500 Kz</p>
-                            <a href="produtos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                            <h4 class="produto__nome">Moda feminina</h4>
+                            <p class="produto__resumo">Vestidos, blusas, saias e peças casuais para diferentes ocasiões.</p>
+                            <a href="produtos.html?filtro=mulher" class="botao botao--principal botao--pequeno botao--completo">Explorar</a>
                         </div>
                     </article>
 
                     <article class="produto">
                         <div class="produto__foto">
-                            <img src="../img/prod-dress.png" alt="Vestido elegante caramel">
+                            <img src="../img/prod-camisa.png" alt="Categoria de moda masculina JCModa">
                         </div>
                         <div class="produto__info">
-                            <h4 class="produto__nome">Vestido Elegante</h4>
-                            <p class="produto__preco">1.200 Kz</p>
-                            <a href="produtos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                            <h4 class="produto__nome">Moda masculina</h4>
+                            <p class="produto__resumo">Camisas, t-shirts e combinações práticas para trabalho e passeio.</p>
+                            <a href="produtos.html?filtro=homem" class="botao botao--principal botao--pequeno botao--completo">Explorar</a>
                         </div>
                     </article>
 
                     <article class="produto">
                         <div class="produto__foto">
-                            <img src="../img/prod-shoes.png" alt="Ténis desportivo branco">
+                            <img src="../img/prod-tenisC.png" alt="Categoria de calçado feminino JCModa">
                         </div>
                         <div class="produto__info">
-                            <h4 class="produto__nome">Ténis Desportivo</h4>
-                            <p class="produto__preco">2.500 Kz</p>
-                            <a href="produtos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                            <h4 class="produto__nome">Calçado feminino</h4>
+                            <p class="produto__resumo">Tênis e opções confortáveis para combinar com vestidos, saias e looks casuais.</p>
+                            <a href="produtos.html?filtro=calcado-feminino" class="botao botao--principal botao--pequeno botao--completo">Explorar</a>
                         </div>
                     </article>
 
                     <article class="produto">
                         <div class="produto__foto">
-                            <img src="../img/prod-shoe.png" alt="Sapato social castanho">
+                            <img src="../img/prod-shoe.png" alt="Categoria de calçado masculino JCModa">
                         </div>
                         <div class="produto__info">
-                            <h4 class="produto__nome">Sapato Social</h4>
-                            <p class="produto__preco">3.000 Kz</p>
-                            <a href="produtos.html" class="botao botao--principal botao--pequeno botao--completo">Ver Mais</a>
+                            <h4 class="produto__nome">Calçado masculino</h4>
+                            <p class="produto__resumo">Sapatos sociais e tênis para rotina formal, aulas e eventos.</p>
+                            <a href="produtos.html?filtro=calcado-masculino" class="botao botao--principal botao--pequeno botao--completo">Explorar</a>
                         </div>
                     </article>
 
@@ -307,6 +415,8 @@
         </div>
     </footer>
 
+    <script src="../js/site.js"></script>
+    <script src="../js/home.js"></script>
 </body>
 
 </html>

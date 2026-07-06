@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Destaques do mes JCModa</title>
+  <desc id="desc">Composicao ficticia de vestido elegante, camisa formal e sapato social.</desc>
+  <rect width="1600" height="900" fill="#FAF5EC"/>
+  <path d="M0 0h1600v900H0z" fill="#F5ECD7"/>
+  <path d="M968 84c190 18 362 152 398 338 44 228-112 392-318 408-212 16-480-72-532-264-50-184 122-506 452-482z" fill="#E0C8A0"/>
+  <path d="M898 172h146l54 150-36 44 88 330H792l86-330-36-44 56-150z" fill="#8B5E3C"/>
+  <path d="M924 218h94l38 100H886l38-100z" fill="#C07840"/>
+  <path d="M630 190h188l46 130-54 26-22-54v330H660V292l-24 54-54-26 48-130z" fill="#FFFFFF"/>
+  <path d="M682 190h84l-42 96-42-96z" fill="#D4A574"/>
+  <rect x="564" y="642" width="330" height="52" rx="26" fill="#2C1A0E"/>
+  <path d="M1076 628c74-20 174 12 216 56 12 12 6 34-12 36H952c-24 0-36-28-18-44 38-34 86-34 142-48z" fill="#6B3A1F"/>
+  <path d="M986 682h260" stroke="#C07840" stroke-width="12" stroke-linecap="round"/>
+  <rect x="112" y="128" width="430" height="96" rx="8" fill="#2C1A0E"/>
+  <rect x="112" y="260" width="520" height="22" rx="11" fill="#6B3A1F"/>
+  <rect x="112" y="310" width="400" height="22" rx="11" fill="#8B5E3C"/>
+  <rect x="112" y="360" width="300" height="22" rx="11" fill="#C07840"/>
+</svg>
