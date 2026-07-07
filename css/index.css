@@ -90,6 +90,7 @@
 
 .carrossel-frio__janela {
     position: relative;
+    height: min(650px, calc(100svh - 148px));
     min-height: min(650px, calc(100svh - 148px));
     overflow: hidden;
     border-radius: var(--borda-raio-medio);
@@ -469,6 +470,7 @@
         padding: 20px 0 24px;
     }
     .carrossel-frio__janela {
+        height: 620px;
         min-height: 620px;
     }
     .carrossel-frio__slide {
@@ -482,6 +484,7 @@
 
 @media (max-width: 480px) {
     .carrossel-frio__janela {
+        height: 590px;
         min-height: 590px;
     }
     .carrossel-frio__slide {
